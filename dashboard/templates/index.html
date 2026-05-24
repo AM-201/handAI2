@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>handAI2 Dashboard</title>
+
+    <style>
+
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #00ff88;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .left {
+            flex: 2;
+        }
+
+        .right {
+            flex: 1;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid #00ff88;
+        }
+
+        .card {
+            background: #1c1c1c;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .green {
+            color: #00ff88;
+        }
+
+        .red {
+            color: #ff4444;
+        }
+
+        .white {
+            color: white;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>handAI2 Dashboard</h1>
+
+    <div class="container">
+
+        <div class="left">
+
+            <div class="card">
+
+                <h2>Live Camera</h2>
+
+                <img
+                  src="/video_feed"
+                  style="
+                      width:100%;
+                      border-radius:10px;
+                      border:2px solid #00ff88;">
+
+            </div>
+
+        </div>
+
+        <div class="right">
+
+            <div class="card">
+
+                <h2>Gesture</h2>
+
+                <p id="gesture">-</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>MQTT Payload</h2>
+
+                <p id="mqtt">-</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>ESP32 Status</h2>
+
+                <p id="esp32">-</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Serial Logs</h2>
+
+                <pre id="logs"></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        async function updateDashboard() {
+
+            try {
+
+                const response = await fetch("/api/state");
+
+                const data = await response.json();
+
+                document.getElementById("gesture").innerText =
+                    data.gesture || "-";
+
+                document.getElementById("mqtt").innerText =
+                    data.mqtt_message || "-";
+
+                document.getElementById("esp32").innerText =
+                    data.esp32_status || "-";
+
+                document.getElementById("logs").innerText =
+                    (data.serial_logs || []).join("\n");
+
+            } catch (err) {
+
+                console.error(err);
+
+            }
+        }
+
+        setInterval(updateDashboard, 300);
+
+    </script>
+
+</body>
+
+</html>

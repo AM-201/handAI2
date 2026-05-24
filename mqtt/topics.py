@@ -1,0 +1,5 @@
+BASE_TOPIC = "handAI2"
+
+GESTURE_TOPIC = f"{BASE_TOPIC}/gesture"
+ESP32_STATUS_TOPIC = f"{BASE_TOPIC}/esp32/status"
+SERIAL_TOPIC = f"{BASE_TOPIC}/serial"
