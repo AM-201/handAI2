@@ -94,8 +94,6 @@ Flask Dashboard
 Browser Interface
 ```
 
-## Usage
-
 ## how to run locally
 
 ```bash
