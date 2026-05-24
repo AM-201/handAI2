@@ -26,6 +26,22 @@ This project combines:
 
 ---
 
+## Demo
+
+### Gestures
+
+| Open Hand                                 | Fist                             | Peace Sign                                  |
+| ----------------------------------------- | -------------------------------- | ------------------------------------------- |
+| ![Open Hand](Images_and_GIF/OpenHand.jpg) | ![Fist](Images_and_GIF/Fist.jpg) | ![Peace Sign](Images_and_GIF/PeaceSign.jpg) |
+
+---
+
+### System Demo Video
+
+![Demo](Images_and_GIF/handAI2_VID.mp4)
+
+---
+
 ## Features
 
 - Real-time hand tracking using MediaPipe
@@ -80,14 +96,22 @@ Browser Interface
 
 ## Usage
 
-## Usage
+## how to run locally
 
-1. Start MQTT broker
-2. Upload ESP32 code
-3. Run:
+```bash
+# 1. Clone repository
+git clone https://github.com/AM-201/handAI2.git
+cd handAI2
 
+# 2. Install required libraries
+pip install -r requirements.txt
+
+# run system
 python main.py
 
-4. Open dashboard:
-
+# Open dashboard
 http://127.0.0.1:5000
+
+
+
+```
