@@ -32,13 +32,13 @@ This project combines:
 
 | Open Hand                                 | Fist                             | Peace Sign                                  |
 | ----------------------------------------- | -------------------------------- | ------------------------------------------- |
-| ![Open Hand](Images_and_GIF/OpenHand.jpg) | ![Fist](Images_and_GIF/Fist.jpg) | ![Peace Sign](Images_and_GIF/PeaceSign.jpg) |
+| ![Open Hand](Images_and_Vid/OpenHand.jpg) | ![Fist](Images_and_Vid/Fist.jpg) | ![Peace Sign](Images_and_Vid/PeaceSign.jpg) |
 
 ---
 
 ### System Demo Video
 
-![Demo](Images_and_GIF/handAI2_VID.mp4)
+![Demo](Images_and_Vid/handAI2_VID.mp4)
 
 ---
 
