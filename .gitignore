@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+conda-env/
+handai/
+handAI_env/
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Flask
+instance/
+.webassets-cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Media/output
+*.jpg
+*.png
+*.mp4
+
+# Build files
+build/
+dist/
+
+# Secrets
+.env
+
+# Arduino build files
+*.ino.bin
+*.elf
